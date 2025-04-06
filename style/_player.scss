@@ -1,0 +1,68 @@
+.player {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    .info {
+        display: flex;
+        gap: 10px;
+
+        img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .image-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            h5 {
+                font-size: 18px;
+                font-weight: 500;
+                color: $textColor;
+            }
+
+            p {
+                color: rgb(150, 150, 150);
+            }
+        }
+
+
+    }
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    margin-right: 20px;
+
+    @include lg {
+        display: none;
+    }
+}
+
+audio {
+    width: 40%;
+
+    @include lg {
+        width: 60%;
+    }
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate {
+    animation: animate 6s linear infinite;
+}
